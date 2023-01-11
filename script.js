@@ -60,8 +60,8 @@ let users = [{
 
 function usersCheck(users) {
     let users2000 = [];
-    for (let user of users) {
-        let sign = +user["balance"].replace(/[^0-9.]/g,"");
+    for (const user of users) {
+        const sign = +user["balance"].replace(/[^0-9.]/g,"");
         if (sign > 2000) {
             users2000.push(user);
         }
@@ -72,7 +72,7 @@ function usersCheck(users) {
 const usersResult = usersCheck(users)
 
 let phones = '';
-for (let user of usersResult) {
+for (const user of usersResult) {
     phones += user['phone'] + '; ';
 }
 
@@ -82,8 +82,8 @@ console.log('Телефонні номери користувачів, у яки
 
 function usersSum(users) {
     let sum = 0;
-    for (let user of users) {
-        let sign = +user["balance"].replace(/[^0-9.]/g, '');
+    for (const user of users) {
+        const sign = +user["balance"].replace(/[^0-9.]/g, '');
         sum += sign;
     }
     return sum;
